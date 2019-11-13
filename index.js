@@ -459,9 +459,9 @@ module.exports = (params) => {
       : undefined,
 
     // Load optional schema DISABLED for now since this isn't used with MySQL
-    // schema: typeof params.schema === 'string' ? params.schema
-    //   : params.schema !== undefined ? error(`'schema' must be a string`)
-    //   : undefined,
+    schema: typeof params.schema === 'string' ? params.schema
+      : params.schema !== undefined ? error(`'schema' must be a string`)
+      : undefined,
 
     // Set hydrateColumnNames (default to true)
     hydrateColumnNames:
